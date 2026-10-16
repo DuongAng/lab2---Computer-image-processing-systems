@@ -123,11 +123,3 @@ python tracker.py IMG_1557.mp4 "Book"
 ## 4. Выводы по работе
 
 Реализован трекинг плоского объекта на видео по ключевым точкам. Связка SIFT + тест отношения + RANSAC-гомография позволяет найти объект на кадре и построить рамку, повторяющую его реальные границы с учётом перспективы. Одного SIFT недостаточно, когда объект маленький или смазан, поэтому добавлен запасной способ — оптический поток Лукаса–Канаде. Вместе они находят объект на 95–100 % кадров тестовых видео и на 97,8 % кадров собственного видео, а пропуски приходятся только на кадры, где объект не различим.
-
-## 5. Использованные источники
-
-1. Lowe D. G. Distinctive Image Features from Scale-Invariant Keypoints // International Journal of Computer Vision. — 2004. — Vol. 60, № 2. — P. 91–110.
-2. Fischler M. A., Bolles R. C. Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography // Communications of the ACM. — 1981. — Vol. 24, № 6. — P. 381–395.
-3. Lucas B. D., Kanade T. An Iterative Image Registration Technique with an Application to Stereo Vision // Proceedings of IJCAI. — 1981. — P. 674–679.
-4. OpenCV documentation: Feature Matching + Homography to find Objects — https://docs.opencv.org/4.x/d1/de0/tutorial_py_feature_homography.html
-5. OpenCV documentation: Optical Flow — https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
